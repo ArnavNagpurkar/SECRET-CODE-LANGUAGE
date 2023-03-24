@@ -4,7 +4,7 @@ print("---------------------Welcome--------------------")
 # Code or Decode?
 choice = input('Code or Decode?(Enter "C" to and "D" to decode): ')
 
-r1 = "adg" # 3 Random characters at starting
+r1 = "adg"  # 3 Random characters at starting
 r2 = "qwe"  # 3 Random characters at ending
 
 # Exit if input is sentence
@@ -30,6 +30,11 @@ elif choice == "D" or choice == "d" or choice == "decode":
     codeSen()
     st = st[-4] + st[3:-4]
     print(f"Secret word was '{st}'")
+
+# Exit
+elif choice == "E" or choice == "e" or choice == "exit":
+    print("Exiting...!")
+    exit()
 
 # Invalid Input
 else:
