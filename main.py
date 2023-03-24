@@ -12,14 +12,14 @@ def codeSen():
     if " " in st:
         print("Enter a word not a sentence to convert! \nExiting...!")
         exit()
-    if len(st)>=20:
-        print("Please enter a small value under 20 characters \nExiting..!")
-        exit()
 
 # Code
 if choice == "C" or choice == "c" or choice == "code":
     st = input("Enter the word to code: ")
     codeSen()
+    if len(st)>=20:
+        print("Please enter a small value under 20 characters \nExiting..!")
+        exit()
     st = st[1:] + st[0]
     code = (r1) + (st) + (r2)
     print(f"Secret code word is '{code}'")
@@ -28,6 +28,9 @@ if choice == "C" or choice == "c" or choice == "code":
 elif choice == "D" or choice == "d" or choice == "decode":
     st = input("Enter the word to decode: ")
     codeSen()
+    if len(st)>=25:
+        print("Please enter a small value under 25 characters \nExiting..!")
+        exit()
     st = st[-4] + st[3:-4]
     print(f"Secret word was '{st}'")
 
